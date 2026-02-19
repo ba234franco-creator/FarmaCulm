@@ -1,0 +1,198 @@
+[
+  {
+    "id": "ibuflash-migran-x20",
+    "nombre": "Ibuflash Migran x20",
+    "precio": 4700,
+    "imagen": "img/ibuflash.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "acetaminofen-500mg-x20",
+    "nombre": "Acetaminofen 500mg x20",
+    "precio": 3200,
+    "imagen": "img/acetaminofen.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "naproxeno-500mg-x20",
+    "nombre": "Naproxeno 500mg x20",
+    "precio": 5500,
+    "imagen": "img/naproxeno.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "ensure-chocolate-400g",
+    "nombre": "Ensure Chocolate 400g",
+    "precio": 11900,
+    "imagen": "img/ensure.PNG",
+    "categoria": "Nutricion"
+  },
+  {
+    "id": "ibuflash-max-x20",
+    "nombre": "Ibuflash Max x20",
+    "precio": 8200,
+    "imagen": "img/ibuflash.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "acetaminofen-forte-x24",
+    "nombre": "Acetaminofen Forte x24",
+    "precio": 4600,
+    "imagen": "img/acetaminofen.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "naproxeno-plus-x30",
+    "nombre": "Naproxeno Plus x30",
+    "precio": 8900,
+    "imagen": "img/naproxeno.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "ensure-fresa-400g",
+    "nombre": "Ensure Fresa 400g",
+    "precio": 12200,
+    "imagen": "img/ensure.PNG",
+    "categoria": "Nutricion"
+  },
+  {
+    "id": "ibuflash-pediatrico-x10",
+    "nombre": "Ibuflash Pediatrico x10",
+    "precio": 5900,
+    "imagen": "img/ibuflash.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "acetaminofen-infantil-x12",
+    "nombre": "Acetaminofen Infantil x12",
+    "precio": 4100,
+    "imagen": "img/acetaminofen.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "naproxeno-gel-caps-x16",
+    "nombre": "Naproxeno Gel Caps x16",
+    "precio": 7300,
+    "imagen": "img/naproxeno.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "ensure-protein-400g",
+    "nombre": "Ensure Protein 400g",
+    "precio": 13400,
+    "imagen": "img/ensure.PNG",
+    "categoria": "Nutricion"
+  },
+  {
+    "id": "ibuflash-noche-x10",
+    "nombre": "Ibuflash Noche x10",
+    "precio": 5200,
+    "imagen": "img/ibuflash.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "acetaminofen-dia-noche-x20",
+    "nombre": "Acetaminofen Dia y Noche x20",
+    "precio": 6400,
+    "imagen": "img/acetaminofen.PNG",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "termometro-infrarrojo-sin-contacto",
+    "nombre": "Termometro Infrarrojo Sin Contacto",
+    "precio": 59900,
+    "imagen": "img/prod-salud-termometro.jpg",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "mascarillas-kn95-x10",
+    "nombre": "Mascarillas KN95 x10",
+    "precio": 18500,
+    "imagen": "img/prod-salud-tapabocas.jpg",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "gel-antibacterial-aloe-500ml",
+    "nombre": "Gel Antibacterial Aloe 500ml",
+    "precio": 12200,
+    "imagen": "img/prod-salud-alcohol.jpg",
+    "categoria": "Salud y Medicamentos"
+  },
+  {
+    "id": "vitamina-c-efervescente-x20",
+    "nombre": "Vitamina C Efervescente x20",
+    "precio": 21400,
+    "imagen": "img/prod-salud-vitaminac.jpg",
+    "categoria": "Vitaminas y Suplementos"
+  },
+  {
+    "id": "serum-vitamina-c-30ml",
+    "nombre": "Serum Vitamina C 30ml",
+    "precio": 24900,
+    "imagen": "img/prod-belleza-serum.jpg",
+    "categoria": "Belleza y Cuidado"
+  },
+  {
+    "id": "protector-solar-toque-seco-fps50",
+    "nombre": "Protector Solar Toque Seco FPS50",
+    "precio": 31500,
+    "imagen": "img/prod-belleza-protector.jpg",
+    "categoria": "Belleza y Cuidado"
+  },
+  {
+    "id": "panales-premium-etapa-3-x34",
+    "nombre": "Panales Premium Etapa 3 x34",
+    "precio": 29900,
+    "imagen": "img/prod-bebe-panales.jpg",
+    "categoria": "Cuidado del Bebe"
+  },
+  {
+    "id": "biberon-anticolico-9oz",
+    "nombre": "Biberon Anticolico 9oz",
+    "precio": 22400,
+    "imagen": "img/prod-bebe-biberon.jpg",
+    "categoria": "Cuidado del Bebe"
+  },
+  {
+    "id": "kit-botiquin-hogar-45-piezas",
+    "nombre": "Kit Botiquin Hogar 45 Piezas",
+    "precio": 39900,
+    "imagen": "img/prod-hogar-botiquin.jpg",
+    "categoria": "Hogar y Bienestar"
+  },
+  {
+    "id": "guantes-nitrilo-x100",
+    "nombre": "Guantes Nitrilo x100",
+    "precio": 24600,
+    "imagen": "img/prod-hogar-guantes.jpg",
+    "categoria": "Hogar y Bienestar"
+  },
+  {
+    "id": "multivitaminico-hombre-x90",
+    "nombre": "Multivitaminico Hombre x90",
+    "precio": 34500,
+    "imagen": "img/prod-vitaminas-multivit.jpg",
+    "categoria": "Vitaminas y Suplementos"
+  },
+  {
+    "id": "omega-3-concentrado-x120",
+    "nombre": "Omega 3 Concentrado x120",
+    "precio": 39900,
+    "imagen": "img/prod-vitaminas-omega.jpg",
+    "categoria": "Vitaminas y Suplementos"
+  },
+  {
+    "id": "colageno-biotina-300g",
+    "nombre": "Colageno + Biotina 300g",
+    "precio": 42300,
+    "imagen": "img/prod-vitaminas-colageno.jpg",
+    "categoria": "Vitaminas y Suplementos"
+  },
+  {
+    "id": "biotina-10000-mcg-x90",
+    "nombre": "Biotina 10.000 mcg x90",
+    "precio": 31200,
+    "imagen": "img/prod-vitaminas-biotina.jpg",
+    "categoria": "Vitaminas y Suplementos"
+  }
+]
