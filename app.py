@@ -393,7 +393,6 @@ class FarmaculmHandler(SimpleHTTPRequestHandler):
         self._send_cors_headers()
         self.end_headers()
         self.wfile.write(body)
-
     def _read_json_body(self) -> dict[str, Any] | None:
         content_length = int(self.headers.get("Content-Length", "0"))
         raw_body = self.rfile.read(content_length) if content_length > 0 else b""
@@ -877,20 +876,15 @@ class FarmaculmHandler(SimpleHTTPRequestHandler):
 def run_server() -> None:
     init_database()
     save_users_export_json()
-    port = int(os.environ.get("PORT", 10000))
-    server = ThreadingHTTPServer(("0.0.0.0", port), handler)
-    server.serve_forever()
 
-    print(f"Servidor activo en https://farmaculm.onrender.com")
-    print(f"API health:    https://farmaculm.onrender.com/api/health")
-    print(f"API productos: https://farmaculm.onrender.com/api/productos")
-    print(f"API usuarios:  https://farmaculm.onrender.com/api/usuarios")
-    print(f"API export:    https://farmaculm.onrender.com/api/usuarios-export")
-    print(f"API register:  https://farmaculm.onrender.com/api/register")
-    print(f"API login:     https://farmaculm.onrender.com/api/login")
-    print(f"API reset req: https://farmaculm.onrender.com/api/password/request-reset")
-    print(f"API reset ok:  https://farmaculm.onrender.com/api/password/confirm-reset")
+    port = int(os.environ.get("PORT", 10000))
+
+    print(f"Servidor activo en puerto {port}")
+    print("URL pública: https://farmaculm.onrender.com")
+    print("Presiona Ctrl + C para detener.")
+
     email_settings = build_registration_email_settings()
+
     if (
         email_settings["enabled"]
         and email_settings["host"]
@@ -898,7 +892,8 @@ def run_server() -> None:
     ):
         print(
             "Email registro: activo "
-            f"({email_settings['from_email']} via {email_settings['host']}:{email_settings['port']})"
+            f"({email_settings['from_email']} via "
+            f"{email_settings['host']}:{email_settings['port']})"
         )
     elif not email_settings["enabled"]:
         print("Email registro: deshabilitado (ENABLE_REGISTER_EMAIL=0)")
@@ -907,7 +902,8 @@ def run_server() -> None:
             "Email registro: pendiente de configurar "
             "(SMTP_HOST, SMTP_USER, SMTP_PASSWORD, SMTP_FROM)"
         )
-    print("Presiona Ctrl + C para detener.")
+
+    server = ThreadingHTTPServer(("0.0.0.0", port), FarmaculmHandler)
 
     try:
         server.serve_forever()
@@ -915,9 +911,8 @@ def run_server() -> None:
         pass
     finally:
         server.server_close()
-        print("\nServidor detenido.")
+        print("Servidor detenido.")
 
 
 if __name__ == "__main__":
     run_server()
-
