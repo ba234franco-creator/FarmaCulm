@@ -60,9 +60,8 @@ document.getElementById("searchInput").addEventListener("keyup", function() {
 
 const backToTop = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
-    // Usamos classList para animaciones CSS
     if (window.scrollY > 300) {
-        backToTop.style.display = "block"; // Asegura visibilidad
+        backToTop.style.display = "block";
         backToTop.classList.add("show");
     } else {
         backToTop.classList.remove("show");

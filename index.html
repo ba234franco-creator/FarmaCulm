@@ -3601,10 +3601,7 @@
     const USER_POINTS_STORAGE_KEY = "farmaculmUserPoints";
     const CART_STORAGE_KEY = "farmaculmCart";
     const LEGACY_SALUD_CART_STORAGE_KEY = "farmaculmSaludCart";
-    const API_BASE =
-        window.location.origin.includes("localhost:8000") || window.location.origin.includes("127.0.0.1:8000")
-            ? ""
-            : "http://localhost:8000";
+    const API_BASE = "https://farmaculm.onrender.com";
     let sesionUsuario = null;
     let authMode = "login";
     let authRecoveryStep = "request";

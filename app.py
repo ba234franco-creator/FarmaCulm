@@ -17,6 +17,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qs, urlparse
+from xml.sax import handler
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -835,7 +836,7 @@ class FarmaculmHandler(SimpleHTTPRequestHandler):
 
         super().do_GET()
 
-    def do_OPTIONS(self) -> None:  # noqa: N802 - standard library method name
+    def do_OPTIONS(self) -> None:
         path = urlparse(self.path).path
         if not path.startswith("/api/"):
             self.send_response(404)
@@ -847,7 +848,7 @@ class FarmaculmHandler(SimpleHTTPRequestHandler):
         self.send_header("Content-Length", "0")
         self.end_headers()
 
-    def do_POST(self) -> None:  # noqa: N802 - standard library method name
+    def do_POST(self) -> None:
         path = urlparse(self.path).path
 
         if path == "/api/register":
@@ -876,19 +877,19 @@ class FarmaculmHandler(SimpleHTTPRequestHandler):
 def run_server() -> None:
     init_database()
     save_users_export_json()
-    port = int(os.environ.get("PORT", "8000"))
-    handler = partial(FarmaculmHandler, directory=str(BASE_DIR))
+    port = int(os.environ.get("PORT", 10000))
     server = ThreadingHTTPServer(("0.0.0.0", port), handler)
+    server.serve_forever()
 
-    print(f"Servidor activo en http://localhost:{port}")
-    print(f"API health:    http://localhost:{port}/api/health")
-    print(f"API productos: http://localhost:{port}/api/productos")
-    print(f"API usuarios:  http://localhost:{port}/api/usuarios")
-    print(f"API export:    http://localhost:{port}/api/usuarios-export")
-    print(f"API register:  http://localhost:{port}/api/register")
-    print(f"API login:     http://localhost:{port}/api/login")
-    print(f"API reset req: http://localhost:{port}/api/password/request-reset")
-    print(f"API reset ok:  http://localhost:{port}/api/password/confirm-reset")
+    print(f"Servidor activo en https://farmaculm.onrender.com")
+    print(f"API health:    https://farmaculm.onrender.com/api/health")
+    print(f"API productos: https://farmaculm.onrender.com/api/productos")
+    print(f"API usuarios:  https://farmaculm.onrender.com/api/usuarios")
+    print(f"API export:    https://farmaculm.onrender.com/api/usuarios-export")
+    print(f"API register:  https://farmaculm.onrender.com/api/register")
+    print(f"API login:     https://farmaculm.onrender.com/api/login")
+    print(f"API reset req: https://farmaculm.onrender.com/api/password/request-reset")
+    print(f"API reset ok:  https://farmaculm.onrender.com/api/password/confirm-reset")
     email_settings = build_registration_email_settings()
     if (
         email_settings["enabled"]
